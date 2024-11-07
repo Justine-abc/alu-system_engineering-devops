@@ -1,19 +1,12 @@
 #!/usr/bin/env bash
-# This script installs Nginx, configures firewall, and sets up an index.html page with 'Holberton School'
-
-# Update package list and install nginx
-sudo apt-get update
-sudo apt-get -y install nginx
-
-# Allow Nginx HTTP traffic through the firewall
-sudo ufw allow 'Nginx HTTP'
-
-# Create index.html with "Holberton School"
-echo "Holberton School" | sudo tee /var/www/html/index.html
-
-# Test nginx configuration for syntax errors
-sudo nginx -t
-
-# Restart nginx without using systemctl (use service instead)
+#Updates the current state of the server
+#Installs Nginx on the server
+#Changes the user and user group ownership for editing file
+#overwrites the default page of nginx
+#restarts nginx
+apt-get -y update
+apt-get install -y nginx
+sudo chown -R $USER:$USER /var/www/html
+echo "Holberton School for the win!" > /var/www/html/index.html
+sudo chown -R root:root /var/www/html
 sudo service nginx restart
-
