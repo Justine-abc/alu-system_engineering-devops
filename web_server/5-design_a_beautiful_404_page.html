@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		    <meta charset="UTF-8">
-		        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			    <title>404 - Page Not Found</title>
-			        <style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
         body {
-		            background-color: #f9f9f9;
-			                font-family: Arial, sans-serif;
-					            color: #333;
-						                text-align: center;
-								            padding: 50px;
-									            }
-	        h1 {
-			            font-size: 4em;
-				                color: #ff6f61;
-						        }
-		        p {
-				            font-size: 1.5em;
-					                margin-top: -10px;
-							        }
-			        .container {
-					            max-width: 600px;
-						                margin: auto;
-								        }
-				        .button {
-						            padding: 12px 20px;
-							                font-size: 1em;
-									            color: white;
-										                background-color: #ff6f61;
-												            text-decoration: none;
-													                border-radius: 5px;
-															            margin-top: 20px;
-																                display: inline-block;
-																		        }
-					        .button:hover {      /* Adding an animation */
-							        @keyloat {
-									            0% { transform: translate; }
-										                50% { transform: translatey(-15px); }
-												            100% { transform: translatey }
-													            }
-								        img {
-										            animatoat 3s ease-in-out infinite;
-											                max-width: 100%;
-													            height: auto;
-														            }
-									    </style>
-	</head>
-	<body>
-		    <div class="container">
-			            <h1>404</h1>
-				            <p>Ceci n'est pas une page</p>
-					            <p>Oops! It seems you've wandered off the path.</p>
-						            <a href="/" class="button">Go Back Home</a>
-							            <img src="path-to-your-illustration.png" alt="Funny illustration of a lost character">
-								        </div>
-	</body>
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff6f61;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: -10px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .button {
+            padding: 12px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #ff6f61;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #ff3b2e;
+        }
+
+        /* Adding an animation */
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+
+            50% {
+                transform: translatey(-15px);
+            }
+
+            100% {
+                transform: translatey(0px);
+            }
+        }
+
+        img {
+            animation: float 3s ease-in-out infinite;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Ceci n'est pas une page</p>
+        <p>Oops! It seems you've wandered off the path.</p>
+        <a href="/" class="button">Go Back Home</a>
+        <img src="/Images/mic.jpg.jpg" alt="Funny illustration of a lost character">
+    </div>
+</body>
+
 </html>
-
-
